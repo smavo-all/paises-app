@@ -21,12 +21,18 @@ export class PaisesService {
   
   
   getPaisesEn() {
-
     return this.getQuery('lang/es')
               .pipe( map( data => data));
-      
+  }
+
+  getPaises( termino: string ) {
+
+    return this.getQuery(`name/${ termino }`)
+                .pipe( map( data => data));
 
   }
+
+
 
 
 

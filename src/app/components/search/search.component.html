@@ -1,1 +1,11 @@
-<p>search works!</p>
+
+<div class="row">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar un Pais..." required>
+    </div>
+</div>
+
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<app-tarjetas *ngIf="!loading" [items]="paises"></app-tarjetas>

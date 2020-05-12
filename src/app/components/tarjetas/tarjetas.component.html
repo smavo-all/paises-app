@@ -1,0 +1,15 @@
+<div class="card-columns m-5 animated fadeIn">
+
+    <div (click)="verPaisesEn( items )" *ngFor="let item of items" class="card puntero">
+        <img class="card-img-top" [src]="item.flag" >
+        <div class="card-body">
+            <h4 class="card-title">{{ item.nativeName | uppercase }}</h4>
+            <h5 class="card-text">
+                 <span  class="badge  badge-primary">
+                    {{ item.capital }}
+                </span> 
+            </h5>
+        </div>
+    </div>
+
+</div>
